@@ -1,0 +1,16 @@
+[(#REM)<!--
+Page Mon Compte :
+
+Charge les controlleurs de chaques panels
+
+-->]
+<div id="moncompte">
+[(#SESSION{id_auteur}|oui)
+    [(#ENV{panel}|oui)<INCLURE{fond=moncompte/#ENV{panel}}{id_auteur=#SESSION{id_auteur}}{env}/>]
+    [(#ENV{panel}|non)<INCLURE{fond=moncompte/accueil}{id_auteur=#SESSION{id_auteur}}{ajax}{env}/>]
+]
+[(#SESSION{id_auteur}|non)
+    <p class="alert">Vous n'êtes pas connecté</p>
+    #FORMULAIRE_LOGIN
+]
+</div>

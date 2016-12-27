@@ -1,0 +1,8 @@
+<entree>
+	<nom>Mon compte</nom>
+	<rang>01</rang>
+	<description>Propose l'accès au profil utilisateur</description>
+	<icone>menus/icn/mon_compte.png</icone>
+	<parametre nom="titre" class="multilang" label="menus:entree_titre" />
+	<parametre nom="css" label="menus:entree_css" />
+</entree>

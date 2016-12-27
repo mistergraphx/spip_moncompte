@@ -1,0 +1,18 @@
+[(#ENV{appel_formulaire}|oui)
+	<div class="titre">Mon compte</div>
+	<div class="infos">Accès au compte utilisateur</div>
+]
+<BOUCLE_appel(CONDITION){si #ENV{appel_menu}|oui}>
+	<li class="menu-entree item[ (#ENV{css})]">
+            [(#SESSION{id_auteur}|non)
+                <a href="#URL_PAGE{identification}" rel="nofollow">Connexion</a>
+            ]
+            [(#SESSION{id_auteur}|oui)
+                <a href="#">#SESSION{nom}</a>
+                [<ul>
+                    (#INCLURE{fond=listes/list_panels})
+                    <li><a href="#URL_LOGOUT{spip.php?page=sommaire}">Se déconnecter</a></li>
+					[(#AUTORISER{ecrire})<li><a href="#EVAL{_DIR_RESTREINT_ABS}"><:espace_prive:></a></li>]
+                </ul>]
+            ]
+</BOUCLE_appel>

@@ -1,0 +1,19 @@
+[(#REM) <!-- # Mon Compte Liste panels
+
+Liste les panels ajoutés via la pipeline moncompte_ajouter_panel
+
+
+-->]
+[(#SET{panels,#PIPELINE{moncompte_ajouter_panel}})]
+<BOUCLE_navMonCompte(DATA){source tableau, #GET{panels}}>
+<li>
+    <a href="#" class="js-accordion-trigger" rel="nofollow">#VALEUR{title}</a>
+    <ul class="submenu">
+        <BOUCLE_pages(DATA){source tableau, #VALEUR{items}}>
+        <li>
+            <a href="[(#URL_PAGE{moncompte}|parametre_url{panel,#VALEUR{url}})]" rel="nofollow">#VALEUR{title}</a>
+        </li>
+        </BOUCLE_pages>
+    </ul>
+</li>
+</BOUCLE_navMonCompte>  

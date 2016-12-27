@@ -1,0 +1,14 @@
+[(#SESSION{id_auteur}|non)
+    <div class="form-login">
+    [<h2>D&eacute;j&agrave; inscrit ?</h2>(#LOGIN_PUBLIC{#URL_PAGE{moncompte}})]
+    </div>
+    <div class="form-inscription">
+    [<h2>Je m'inscris !</h2>(#FORMULAIRE_INSCRIPTION_RAPIDE{6forum})]
+    </div>
+]
+[(#SESSION{id_auteur}|oui)
+    <p class="alert-notice">
+        Vous ête déjà identifié #SESSION{nom},<br>
+        Vous souhaitez <a href="#URL_PAGE{moncompte}">accéder à votre compte</a>
+    </p>
+]

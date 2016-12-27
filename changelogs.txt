@@ -1,0 +1,17 @@
+# Changelogs Moncompte
+
+Thu Sep 29 08:58:11 2016
+:   *   Les liens de menu sont en nofollow, pour éviter l'indexation
+
+Fri Sep 02 15:25:06 2016
+:   *   le menu mon compte, renvoie vers la page : identification
+        qui comporte le formulaire d'inscription rapide et le formulaire d'identification
+
+- Ajout du paneau gestion des notifications :
+    - ne liste aucune notifications pour le moment
+
+-   ajout de la page identification
+    la page affiche la connection et l'inscription au site
+    
+Sun Mar 20 15:03:31 2016
+:   *   	ajout d'une page de connection/inscription

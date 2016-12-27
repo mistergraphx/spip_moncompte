@@ -1,0 +1,22 @@
+<paquet
+	prefix="moncompte"
+	categorie="auteur"
+	version="1.0.7"
+	etat="dev"
+	compatibilite="[3.0.5;3.1.*]"
+	logo=""
+	documentation=""
+	schema="1.0.0" 
+>
+	<nom>Mon Compte</nom>
+	<auteur lien='http://www.mister-graphx.com'>Arnaud B. (Mist. GraphX)</auteur>
+
+	<licence>GNU/GPL</licence>
+
+	<pipeline nom="autoriser" inclure="moncompte_autorisations.php" />
+        
+    <pipeline nom="moncompte_ajouter_panel" inclure="moncompte_pipelines.php" />
+	
+	<utilise nom="autorite" compatibilite="[0.10.0;[" />
+	<utilise nom="notifavancees" compatibilite="[0.3.1;]" />
+</paquet>
