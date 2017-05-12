@@ -37,5 +37,3 @@ function moncompte_moncompte_ajouter_panel($panels){
     return $panels;
 }
 
-
-?>

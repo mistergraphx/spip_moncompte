@@ -23,7 +23,15 @@ mais ne servent que de contrôleur pour les différent panneaux inclus.
 
 Tout les panneaux sont placés dans un dossier `/moncompte` permettant de ne pas encombrer inutilement le dossier `content` ou `inclure`.
 
-Un squelette accueil.html permet de personnaliser l'accueil de l'espace membre.
+Un squelette `accueil.html` permet de personnaliser l'accueil de l'espace membre.
+
+### Affichages et liens internes
+
+Pour afficher un "sous-panel", par exemple pour visualiser le détail d'une entrée de liste
+
+```
+ <a href="[(#URL_PAGE{moncompte}|parametre_url{panel,commande_voir}|parametre_url{id_commande,#ID_COMMANDE})]">Voir le détail</a>
+```
 
 
 ## Menu
