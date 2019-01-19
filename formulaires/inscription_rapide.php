@@ -91,7 +91,7 @@ function envoyer_inscription($desc, $nom, $mode, $options=array()) {
 	$contexte['nom'] = $nom;
 	$contexte['mode'] = $mode;
 
-	$message = recuperer_fond('modeles/mail_inscription_rapide',$contexte);
+	$message = recuperer_fond('emails/mail_inscription_rapide',$contexte);
 	$from = (isset($options['from'])?$options['from']:null);
 	$head = null;
 	return array("", $message,$from,$head);

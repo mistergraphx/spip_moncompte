@@ -1,0 +1,29 @@
+[(#REM)<!-- # Navigation
+
+Les liens sont ajoutés vi la PIPELINE moncompte_ajouter_panel
+
+ARRAY:
+    - title
+    - items
+        - page :
+            - titre
+            - lien
+        - page :
+            - title
+            - url
+
+-->]
+<ul class="navigation" id="nav-moncompte">
+    [(#INCLURE{fond=listes/list_panels,css=js-accordion})]
+</ul>
+
+<script type="application/x-javascript">
+//<![CDATA[
+$('.js-accordion > a').on('click', function(e){
+    jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
+    jQuery(this).parent().find('.icn-down').toggleClass('icn-up');
+    jQuery(this).parent().toggleClass('is-expanded');
+    e.preventDefault();
+});
+//]]>
+</script>

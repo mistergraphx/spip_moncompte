@@ -9,8 +9,7 @@ Si le plugin Newsletter est installé, un panneau newsletter est ajouté a la ge
 ce panneau est donc relativement inutile pour le moment**
 
 Si le plugin notification avancee est installé, la gestion des notifications est accessible :
-- aucune notification listéees pour le moment
-
+- aucune notification listées pour le moment
 
 
 ## Squelettes
@@ -62,30 +61,30 @@ fichier `monplugin_pipelines.php`
 */
 
 function zshop_moncompte_ajouter_panel($panels){
-    
+
     $panels['commandes'] = array(
         'title'=>'Mes commandes',
         'items'=>array(
                 array('title'=>"Voir mes commandes",'url'=>'commandes_toutes'),
         )
     );
-    
+
     $panels['abonnements'] = array(
         'title'=>'Mes abonnements',
         'items'=>array(
                 array('title'=>'Tous mes abonnements','url'=>'abonnements_tous'),
         )
     );
-    
+
     $panels['adresses'] = array(
         'title'=>'Livraisons et adresse',
         'items'=>array(
                 array('title'=>'Gérer mes adresses','url'=>'adresses_toutes'),
         )
     );
-    
-        
-        
+
+
+
     return $panels;
 }
 
@@ -96,9 +95,9 @@ Ajouter des menus à un panel existant :
 ````
 function monplugin_moncompte_ajouter_panel($panels){
 
-    	$new_item['profil']['items'][] = array('title'=>'Newsletter','url'=>'test_page');
-    
-    	$panels = array_merge_recursive($panels, $new_item);
+  $new_item['profil']['items'][] = array('title'=>'Newsletter','url'=>'test_page');
+
+  $panels = array_merge_recursive($panels, $new_item);
 	$return $panels;
 }
 
@@ -108,4 +107,3 @@ function monplugin_moncompte_ajouter_panel($panels){
 
 - [ ]   Autres plugins a intégrer :  
         Gestion d'abonements a des alertes sur des objets spip : http://www.kokmoka.com/plugins-spip-alertes/
-

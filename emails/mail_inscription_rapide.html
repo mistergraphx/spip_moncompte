@@ -1,0 +1,39 @@
+[(#REM)<!--
+Mail HTML simplifie mis en forme complete par le filtre |facteur_email_wrap_to_html
+-->]
+<title>[[(#NOM_SITE_SPIP|textebrut)]] <:form_forum_identifiants:></title>
+<body>
+	<div class="header">
+		<h2><:form_forum_identifiants:></h2>
+		<hr/>
+	</div>
+
+	<p><:form_forum_bonjour{nom=#ENV{nom}}:></p>
+
+	[(#ENV{url_confirm}|oui)
+	[(#SET{url,[<br><center>(#INCLURE{fond=emails/inc-button,url=#ENV{url_confirm},label=<:bouton_confirmer_email:>,width=250px,bgcolor=#aaaaaa,bordercolor=#888888})</center>]})]
+	<:form_forum_confirmer_email{url_confirm=#GET{url}}:>
+	]
+
+	#SET{url_site,#URL_SITE_SPIP/}
+	[(#ENV{mode}|=={6forum}|oui)
+	#SET{url_login,#URL_PAGE{login}}
+	<p><:form_forum_voici1{nom_site_spip=#NOM_SITE_SPIP,adresse_site=#GET{url_site},adresse_login=#GET{url_login}}:></p>
+	]
+	[(#ENV{mode}|=={6forum}|non)
+	#SET{url_login,#URL_SITE_SPIP|concat{'/',#EVAL{_DIR_RESTREINT_ABS}}}
+	<p><:form_forum_voici2{nom_site_spip=#NOM_SITE_SPIP,adresse_site=#GET{url_site},adresse_login=#GET{url_login}}:></p>
+	]
+
+	<p>&mdash; <a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a></p>
+
+	<div class="footer">
+		<hr/>
+		<p>
+		<:form_forum_login:>[ <tt>(#ENV{email,email})</tt>]<br />
+		<:form_forum_pass:>[ <tt>(#ENV{pass,pass})</tt>]
+		</p>
+	</div>
+
+</body>
+#FILTRE{facteur_email_wrap_to_html}

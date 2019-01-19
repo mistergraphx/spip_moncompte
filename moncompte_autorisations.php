@@ -63,6 +63,3 @@ if (!function_exists('autoriser_auteur_modifier')) {
                             AND $id == $qui['id_auteur'];
             }
 }
-
-
-?>

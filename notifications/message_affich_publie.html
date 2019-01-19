@@ -1,0 +1,30 @@
+[(#REM)<!--  Squelette de notification messages entre membres
+
+Notification message envoyé via l'espace privé du site
+
+plugin : dist/organiseur
+
+-->]
+<title>#NOM_SITE_SPIP : Vous avez reçu un message</title>
+<body>
+<BOUCLE_mess(MESSAGES){id_message}{statut?}{tout}>
+	
+[(#VAL{organiseur:notification_annonce_publie_1}|_T{#ARRAY{nom_site_spip,#NOM_SITE_SPIP,titre,#TITRE}}|nettoyer_titre_email)]
+
+#SET{url,#URL_ECRIRE{message,id_message=#ID_MESSAGE}|url_absolue}
+
+<a href="#GET{url}"><:organiseur:notification_annonce_lire_a_ladresse{url=#GET{url}}:></a>
+
+<!--
+fichier message_affich_publie-->
+
+
+
+<strong>Sujet :</strong>
+#TITRE<br/>
+<strong>Message :</strong><br/>
+#TEXTE
+
+</BOUCLE_mess>
+</body>
+#FILTRE{facteur_email_wrap_to_html}

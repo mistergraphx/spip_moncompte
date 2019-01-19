@@ -15,25 +15,28 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * @param {array} panels - an array of panels & sub items
 */
 function moncompte_moncompte_ajouter_panel($panels){
-    
-    $panels['profil'] = array(
+
+    $panels = array('profil'=>array(
         'title'=>'Profil',
-        'items'=>array(
+        'items'=> array(
                 array('title'=>"Modifier mon Profil",'url'=>'profil_modifier'),
         )
-    );
-    
-    $new_item = array();
-    
+    ));
+
     if(test_plugin_actif('newsletters')){
-        $new_item['profil']['items'][] = array('title'=>'Gérer mes inscriptions','url'=>'profil_newsletters');
+        $panels['profil']['items'][] = array('title'=>'Gérer mes inscriptions','url'=>'profil_newsletters');
     }
     if(test_plugin_actif('notifavancees')){
-        $new_item['profil']['items'][] = array('title'=>'Gérer mes notifications','url'=>'profil_notifications');        
+        $panels['profil']['items'][] = array('title'=>'Gérer mes notifications','url'=>'profil_notifications');
     }
 
-    $panels = array_merge_recursive($panels, $new_item);
-    
+    $panels['produits'] = array(
+        'title'=>'Produits',
+        'items'=>array(
+                array('title'=>'Tous mes produits','url'=>'produit_liste'),
+        )
+    );
+
+
     return $panels;
 }
-
