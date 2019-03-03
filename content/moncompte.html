@@ -3,14 +3,20 @@ Page Mon Compte :
 
 Charge les controlleurs de chaques panels
 
+https://contrib.spip.net/Utilisation-de-la-balise-SESSION-et-optimisation
+https://contrib.spip.net/Du-php-dans-le-squelette-a-la-place-de-SESSION-ou
+
+https://contrib.spip.net/CacheLab-etend-la-balise-CACHE
 -->]
-[(#SESSION{id_auteur}|oui)
-    <INCLURE{fond=moncompte/navigation,env}/>
-    <div id="moncompte">
-    [(#ENV{panel}|oui)<INCLURE{fond=moncompte/#ENV{panel}}{id_auteur=#SESSION{id_auteur}}{env}/>]
-    [(#ENV{panel}|non)<INCLURE{fond=moncompte/accueil}{id_auteur=#SESSION{id_auteur}}{ajax}{env}/>]
-    </div>]
-[(#SESSION{id_auteur}|non)
-    <p class="alert">Vous n'êtes pas connecté</p>
-    #FORMULAIRE_LOGIN
-]
+#CACHE{5}
+#SET{id_auteur,#AUTORISER{webmestre}|?{#ENV{id_auteur,#SESSION{id_auteur}},#SESSION{id_auteur}}}
+<BOUCLE_auteur(AUTEURS){tous}{id_auteur=#GET{id_auteur}}>
+<INCLURE{fond=moncompte/navigation,env}/>
+<div id="moncompte">
+[(#ENV{panel}|oui)<INCLURE{fond=moncompte/#ENV{panel}}{id_auteur}{env}/>]
+[(#ENV{panel}|non)<INCLURE{fond=moncompte/accueil}{id_auteur}{ajax}{env}/>]
+</div>
+</BOUCLE_auteur>
+  <p class="alert">Vous n'êtes pas connecté</p>
+  #FORMULAIRE_LOGIN
+<//B_auteur>
