@@ -26,16 +26,18 @@ function moncompte_moncompte_ajouter_panel($panels){
     if(test_plugin_actif('newsletters')){
         $panels['profil']['items'][] = array('title'=>'Gérer mes inscriptions','url'=>'profil_newsletters');
     }
-    if(test_plugin_actif('notifavancees')){
-        $panels['profil']['items'][] = array('title'=>'Gérer mes notifications','url'=>'profil_notifications');
-    }
+    // @todo panel de gestion des notifications
+    // if(test_plugin_actif('notifavancees')){
+    //     $panels['profil']['items'][] = array('title'=>'Gérer mes notifications','url'=>'profil_notifications');
+    // }
 
-    $panels['produits'] = array(
-        'title'=>'Produits',
-        'items'=>array(
-                array('title'=>'Tous mes produits','url'=>'produit_liste'),
-        )
-    );
+    // ex: dans le cas de gestion de produits coté public
+    // $panels['produits'] = array(
+    //     'title'=>'Produits',
+    //     'items'=>array(
+    //             array('title'=>'Tous mes produits','url'=>'produit_liste'),
+    //     )
+    // );
 
 
     return $panels;

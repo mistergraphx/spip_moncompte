@@ -1,7 +1,7 @@
 <paquet
 	prefix="moncompte"
 	categorie="auteur"
-	version="1.1.0"
+	version="1.1.1"
 	etat="test"
 	compatibilite="[3.0.5;3.2.*]"
 	logo=""
@@ -19,5 +19,6 @@
 
 	<utilise nom="organiseur" compatibilite="[1.0.3;[" />
 	<utilise nom="autorite" compatibilite="[0.10.0;[" />
+	<utilise nom="commandes" compatibilite="[0.3.1;]" />
 	<utilise nom="notifavancees" compatibilite="[0.3.1;]" />
 </paquet>
