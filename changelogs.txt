@@ -1,5 +1,11 @@
 # Changelogs Moncompte
 
+1.1.2
+
+sécurité suppression de code mort/test de gestion produits stocks en mode public
+
+1.1
+
 - changement de la structure z : on utilise uniquement content/
 - ajout d'un repertoire emails/ dédiés au messages envoyés via facteur
 - ajout du mail envoyé via facteur
