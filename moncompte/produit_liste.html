@@ -1,3 +1,5 @@
 <h1>Mes produits</h1>
 
-<INCLURE{fond=prive/squelettes/contenu/gerer_stocks,env,ajax}/>
+[(#AUTORISER{voir,stock}|oui)
+<INCLURE{fond=prive/squelettes/contenu/gerer_stocks,id_auteur,env,ajax}/>
+]
