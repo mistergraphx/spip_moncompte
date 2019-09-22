@@ -46,6 +46,12 @@ function formulaires_inscription_rapide_verifier_dist($statut='6forum', $retour=
     if(_request('mail_inscription') != _request('mail_inscription_verif')){
         $erreurs['mail_inscription'] = "Les deux emails ne sont pas identiques";
     }
+    // Vérifier que le domaine de l'email saisi existe
+    if(! domain_exists(_request('mail_inscription'))){
+        list( $user, $domain ) = explode( '@', _request('mail_inscription') );
+        $erreurs['mail_inscription'] = "Le domaine ".$domain." ne semble pas être valide";
+    }
+
 	return $erreurs;
 }
 
@@ -76,7 +82,21 @@ function formulaires_inscription_rapide_traiter_dist($statut='6forum', $retour='
 	return $res;
 }
 
-
+/**
+ * domain_exists()
+ *
+ * test si le domaine du email saisi existe
+ *
+ * https://davidwalsh.name/php-email-validator
+ *
+ * @param $email - email
+ * @param $record - MX
+ * @return return type
+ */
+function domain_exists($email, $record = 'MX'){
+    list( $user, $domain ) = explode( '@', $email );
+	return checkdnsrr( $domain, $record );
+}
 
 /**
  * construction du mail envoyant les identifiants
