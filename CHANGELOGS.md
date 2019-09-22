@@ -1,4 +1,7 @@
 # Changelogs Moncompte
+1.1.3
+
+formulaire d'inscription rapide : l'utilisateur doit saisir deux fois sont email afin d'éviter une erreur de frappe
 
 1.1.2
 
