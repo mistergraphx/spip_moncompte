@@ -1,7 +1,11 @@
-# Changelogs Moncompte
+# Changelogs
+
 1.1.3
 
-formulaire d'inscription rapide : l'utilisateur doit saisir deux fois sont email afin d'éviter une erreur de frappe
+formulaire d'inscription rapide :
+- l'utilisateur doit saisir deux fois sont email afin d'éviter une erreur de frappe
+- l'enregistrement du domaine de l'email saisie est vérifié
+
 
 1.1.2
 
