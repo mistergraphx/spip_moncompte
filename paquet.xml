@@ -5,11 +5,11 @@
 	etat="test"
 	compatibilite="[3.0.5;3.2.*]"
 	logo=""
-	documentation=""
+	documentation="https://github.com/mistergraphx/spip_moncompte"
 	schema="1.0.0"
 >
 	<nom>Mon Compte</nom>
-	<auteur lien='http://www.mister-graphx.com'>Arnaud B. (Mist. GraphX)</auteur>
+	<auteur lien='https://www.mister-graphx.com'>Arnaud B. (Mist. GraphX)</auteur>
 
 	<licence>GNU/GPL</licence>
 
