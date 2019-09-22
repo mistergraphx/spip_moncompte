@@ -6,13 +6,18 @@
 		#ACTION_FORMULAIRE{#ENV{action}}
 		<fieldset>
 			<legend><:form_forum_identifiants:></legend>
-			<ul class="editer-groupe">
-				<li class='editer editer_mail_inscription obligatoire[ (#ENV*{erreurs}|table_valeur{mail_inscription}|oui)erreur]'>
+			<div class="editer-groupe">
+				<div class='editer editer_mail_inscription obligatoire[ (#ENV*{erreurs}|table_valeur{mail_inscription}|oui)erreur]'>
 					<label for="mail_inscription"><:moncompte:label_inscription_adresse_email:></label>
 					[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{mail_inscription})</span>]
 					<input[ (#HTML5|?{required="required" type="email" class="text email",type="text" class="text"})] name="mail_inscription" id="mail_inscription" value="#ENV{mail_inscription}" size="30"[(#ENV{focus}|=={mail_inscription}|et{#HTML5}|oui) autofocus="autofocus"] autocapitalize="off" autocorrect="off" />
-				</li>
-			</ul>
+				</div>
+                <div class='editer editer_mail_inscription_verif obligatoire[ (#ENV*{erreurs}|table_valeur{mail_inscription_verif}|oui)erreur]'>
+					<label for="mail_inscription_verif"><:moncompte:label_inscription_adresse_email_verifier:></label>
+					[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{mail_inscription_verif})</span>]
+					<input[ (#HTML5|?{required="required" type="email" class="text email",type="text" class="text"})] name="mail_inscription_verif" id="mail_inscription_verif" value="#ENV{mail_inscription_verif}" size="30"[(#ENV{focus}|=={mail_inscription_verif}|et{#HTML5}|oui) autofocus="autofocus"] autocapitalize="off" autocorrect="off" />
+				</div>
+			</div>
 		</fieldset>
 		<p class="boutons"><input type="submit" class="submit" value="<:bouton_valider:>" /></p>
 	</form>

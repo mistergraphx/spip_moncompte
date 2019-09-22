@@ -17,7 +17,9 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 function formulaires_inscription_rapide_charger_dist($statut='6forum', $retour='') {
 
 	$inscription_charger = charger_fonction("charger","formulaires/inscription");
-	return $inscription_charger($statut);
+    $valeurs = $inscription_charger($statut);
+    $valeurs['mail_inscription_verif'] = '';
+	return $valeurs;
 }
 
 /**
@@ -30,7 +32,7 @@ function formulaires_inscription_rapide_charger_dist($statut='6forum', $retour='
  */
 function formulaires_inscription_rapide_verifier_dist($statut='6forum', $retour='') {
 
-	// fournir le nom à partir de l'email
+    // fournir le nom à partir de l'email
 	$nom = _request('mail_inscription');
 	$nom = explode('@',$nom);
 	$nom = reset($nom);
@@ -38,8 +40,12 @@ function formulaires_inscription_rapide_verifier_dist($statut='6forum', $retour=
 	$nom = ucwords($nom);
 	set_request('nom_inscription',$nom);
 	$inscription_verifier = charger_fonction("verifier","formulaires/inscription");
-	$erreurs = $inscription_verifier($statut);
 
+	$erreurs = $inscription_verifier($statut);
+    // Verifier que l'email et email_verif sont identique
+    if(_request('mail_inscription') != _request('mail_inscription_verif')){
+        $erreurs['mail_inscription'] = "Les deux emails ne sont pas identiques";
+    }
 	return $erreurs;
 }
 
