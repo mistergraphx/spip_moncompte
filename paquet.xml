@@ -15,7 +15,7 @@
 
 	<pipeline nom="autoriser" inclure="moncompte_autorisations.php" />
 
-  <pipeline nom="moncompte_ajouter_panel" inclure="moncompte_pipelines.php" />
+    <pipeline nom="moncompte_ajouter_panel" inclure="moncompte_pipelines.php" />
 
 	<utilise nom="organiseur" compatibilite="[1.0.3;[" />
 	<utilise nom="autorite" compatibilite="[0.10.0;[" />
