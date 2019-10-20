@@ -1,7 +1,7 @@
 <paquet
 	prefix="moncompte"
 	categorie="auteur"
-	version="1.1.4"
+	version="1.1.5"
 	etat="test"
 	compatibilite="[3.0.5;3.2.*]"
 	documentation="https://github.com/mistergraphx/spip_moncompte"
@@ -14,7 +14,7 @@
 
 	<pipeline nom="autoriser" inclure="moncompte_autorisations.php" />
 
-    <pipeline nom="moncompte_ajouter_panel" inclure="moncompte_pipelines.php" />
+  <pipeline nom="moncompte_ajouter_panel" inclure="moncompte_pipelines.php" />
 
 	<utilise nom="organiseur" compatibilite="[1.0.3;[" />
 	<utilise nom="autorite" compatibilite="[0.10.0;[" />
