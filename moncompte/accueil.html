@@ -3,7 +3,13 @@
 Accueil de la gestion de compte.
 
 -->]
+<div class="texte">
 <h1><:moncompte:moncompte_titre:></h1>
 
-Bienvenue[ (#SESSION{nom})]<br>
+<h2>Bienvenue[ (#SESSION{nom})]</h2>
 
+[(#AUTORISER{ecrire})
+<h2>Accès à l'espace privé</h2>
+<a class="btn btn-primary" href="#EVAL{_DIR_RESTREINT_ABS}">Edition du site</a>
+]
+</div>
