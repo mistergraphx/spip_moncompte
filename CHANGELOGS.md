@@ -1,5 +1,13 @@
 # Changelogs
 
+1.1.5
+
+* chaine de langue personalisable acceuil_introduction
+
+1.1.4
+
+* ajout a la page accueil d'un lien vers l'espace privé si autorisé
+
 1.1.3
 
 formulaire d'inscription rapide :
