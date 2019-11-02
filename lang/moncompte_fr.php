@@ -15,6 +15,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   'label_inscription_adresse_email'	=> 'Indiquez votre adresse mail',
   'label_inscription_adresse_email_verifier' => 'Vérification de votre adresse',
 
+  // P
+  'profil_newsletter_titre' => 'Gérer mes abonnements',
+  'profil_newsletter_subscribe' => 'Je m\'inscris',
+  'profil_newsletter_unsubscribe' => 'Je me désinscris',
+
 	// T
 	'titre_page_configurer_moncompte' => 'configurer_moncompte',
 );

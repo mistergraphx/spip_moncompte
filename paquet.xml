@@ -1,7 +1,7 @@
 <paquet
 	prefix="moncompte"
 	categorie="auteur"
-	version="1.1.5"
+	version="1.1.6"
 	etat="test"
 	compatibilite="[3.0.5;3.2.*]"
 	documentation="https://github.com/mistergraphx/spip_moncompte"

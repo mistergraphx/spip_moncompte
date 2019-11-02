@@ -1,5 +1,9 @@
 # Changelogs
 
+1.1.6
+
+* Chaines de langue sur la gestion des inscriptions aux newsletters
+
 1.1.5
 
 * chaine de langue personalisable acceuil_introduction
