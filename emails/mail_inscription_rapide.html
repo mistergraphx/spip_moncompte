@@ -17,15 +17,13 @@ Mail HTML simplifie mis en forme complete par le filtre |facteur_email_wrap_to_h
 
 	#SET{url_site,#URL_SITE_SPIP/}
 	[(#ENV{mode}|=={6forum}|oui)
-	#SET{url_login,#URL_PAGE{login}}
-	<p><:form_forum_voici1{nom_site_spip=#NOM_SITE_SPIP,adresse_site=#GET{url_site},adresse_login=#GET{url_login}}:></p>
+	#SET{url_login,#URL_PAGE{moncompte}}
+	<p><:email_inscription_message_visiteur{nom_site_spip=#NOM_SITE_SPIP,adresse_site=#GET{url_site},url_login=#GET{url_login}}:></p>
 	]
 	[(#ENV{mode}|=={6forum}|non)
 	#SET{url_login,#URL_SITE_SPIP|concat{'/',#EVAL{_DIR_RESTREINT_ABS}}}
-	<p><:form_forum_voici2{nom_site_spip=#NOM_SITE_SPIP,adresse_site=#GET{url_site},adresse_login=#GET{url_login}}:></p>
+	<p><:email_inscription_message_visiteur{nom_site_spip=#NOM_SITE_SPIP,adresse_site=#GET{url_site},url_login=#GET{url_login}}:></p>
 	]
-
-	<p>&mdash; <a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a></p>
 
 	<div class="footer">
 		<hr/>

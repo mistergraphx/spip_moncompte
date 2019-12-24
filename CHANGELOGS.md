@@ -1,5 +1,12 @@
 # Changelogs
 
+1.1.7 :
+
+* ajout de chaines de langues spécifique au formulaire inscription rapide
+* report dans le modèle email envoyé
+* dans la page d'accès a moncompte le formulaire login renvoye sur la page
+* dans le mail reçut l'url est celle de l'accès compte client
+
 1.1.6
 
 * Chaines de langue sur la gestion des inscriptions aux newsletters
