@@ -1,5 +1,9 @@
 # Changelogs
 
+* surcharge du système de récupération du mot de passe de la dist spip (formulaire/oubli)
+* la notification d'oubli de mot de passe est déplacé dans emails/oubli 
+
+
 1.1.7 :
 
 * ajout de chaines de langues spécifique au formulaire inscription rapide

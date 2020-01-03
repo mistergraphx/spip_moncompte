@@ -1,0 +1,13 @@
+[(#REM)
+
+  Squelette
+  (c) 2009 SPIP
+  Distribue sous licence GPL
+
+]
+<title>[\[(#NOM_SITE_SPIP|concat{'\] ',<:pass_oubli_mot:>}|nettoyer_titre_email)]</title>
+<body>
+<:pass_mail_passcookie{nom_site_spip=#NOM_SITE_SPIP,adresse_site=#URL_SITE_SPIP,sendcookie=#ENV{url_reset}}:>
+</body>
+<!-- Filtre qui crée le mail au bon formats (html/txt) d'après le squelette emails/texte.html -->
+#FILTRE{facteur_email_wrap_to_html}
