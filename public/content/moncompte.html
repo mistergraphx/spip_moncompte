@@ -8,7 +8,7 @@ https://contrib.spip.net/Du-php-dans-le-squelette-a-la-place-de-SESSION-ou
 
 https://contrib.spip.net/CacheLab-etend-la-balise-CACHE
 -->]
-#CACHE{5}
+#CACHE{24*3600}
 #SET{id_auteur,#AUTORISER{webmestre}|?{#ENV{id_auteur,#SESSION{id_auteur}},#SESSION{id_auteur}}}
 <BOUCLE_auteur(AUTEURS){tous}{id_auteur=#GET{id_auteur}}>
 <INCLURE{fond=moncompte/navigation,env}/>

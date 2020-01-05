@@ -1,7 +1,7 @@
 <paquet
 	prefix="moncompte"
 	categorie="auteur"
-	version="1.1.8"
+	version="1.2.0"
 	etat="test"
 	compatibilite="[3.0.5;3.2.*]"
 	documentation="https://github.com/mistergraphx/spip_moncompte"
@@ -19,4 +19,8 @@
 	<utilise nom="autorite" compatibilite="[0.10.0;[" />
 	<utilise nom="commandes" compatibilite="[0.3.1;]" />
 	<utilise nom="notifavancees" compatibilite="[0.3.1;]" />
+
+	<chemin path=""/>
+	<chemin path="spip"/>
+	<chemin path="public"/>
 </paquet>
