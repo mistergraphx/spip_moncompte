@@ -11,7 +11,7 @@ if (isset($GLOBALS["visiteur_session"]['statut'])
 ?>
 			<a href="#">#SESSION{nom}</a>
 			<ul>
-				<INCLURE{fond=listes/list_panels} />
+				<INCLURE{fond=inclure/moncompte/list_panels} />
 				<li><a href="#URL_LOGOUT{spip.php?page=sommaire}">Se déconnecter</a></li>
 				[(#AUTORISER{ecrire})<li><a href="#EVAL{_DIR_RESTREINT_ABS}"><:espace_prive:></a></li>]
 			</ul>
