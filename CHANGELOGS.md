@@ -1,5 +1,9 @@
 # Changelogs
 
+1.2.1
+
+* fix : formulaire profil on utilise SESSION{id_auteur}
+
 * surcharge du système de récupération du mot de passe de la dist spip (formulaire/oubli)
 * la notification d'oubli de mot de passe est déplacé dans emails/oubli 
 
