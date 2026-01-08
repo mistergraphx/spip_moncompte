@@ -1,7 +1,14 @@
 # Changelogs
 
+1.3.0
+
+- compat spip 4 et ajustement des versions avec l'ecosystem fragment
+
+
+1.1.8
+
 * surcharge du système de récupération du mot de passe de la dist spip (formulaire/oubli)
-* la notification d'oubli de mot de passe est déplacé dans emails/oubli 
+* la notification d'oubli de mot de passe est déplacé dans emails/oubli
 
 
 1.1.7 :
