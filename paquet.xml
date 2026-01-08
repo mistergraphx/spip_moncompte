@@ -19,4 +19,8 @@
 	<utilise nom="autorite" compatibilite="[0.10.0;[" />
 	<utilise nom="commandes" compatibilite="[0.3.1;]" />
 	<utilise nom="notifavancees" compatibilite="[0.3.1;]" />
+
+	<chemin path=""/>
+	<chemin path="spip"/>
+	<chemin path="public"/>
 </paquet>
